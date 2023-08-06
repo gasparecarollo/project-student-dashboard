@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import data from "./data/data.json"
-import studentDetails from "./Components/studentDetails";
+import studentDetails, { GraduationStatus } from "./Components/studentDetails";
 // import "App.css"
 
 
