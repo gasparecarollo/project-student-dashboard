@@ -1,6 +1,19 @@
+.header {
+
+    border: 5px solid gray;
+    padding: 30px;
+    background-color: yellow;
+
+}
+
+
 .card_container {
 
     border: 3px;
     border-radius: 5px;
     border-color: blue;
+    background-color: beige;
+    border-style: dashed;
+    padding: 10px;
+
 }

@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import data from "./data/data.json"
 import studentDetails, { GraduationStatus } from "./Components/studentDetails";
-// import "App.css"
+import StudentByCohort from "./Components/StudentByCohort";
+import "./App.css"
 
 
 console.log("data[0] : ", data[0])
@@ -61,30 +62,19 @@ function App() {
     )
   )
 
-  const cohortsToRender = data.map(
-    (cohortsByYear) => {
-      return (
-        <div className="cohortByStartDate">
-          <h3>{`${cohortsByYear.cohort.cohortCode}`}</h3>
 
-        </div >
-
-
-      )
-    }
-  )
 
 
   return (
     <div>
       <h1 className="header">Student Dashboard</h1>
-      {studentsToRender}
+      {/* {studentsToRender} */}
       <h2>Choose A Class By Start Date</h2>
-      {/* {cohortsToRender} */}
+      <StudentByCohort />
 
       <div className="studentDeets">
         <h2> Student Details</h2>
-        {studentsToRender}
+        {/* {studentsToRender} */}
         {showCertifs && studentsToRender.map(eachStudentObj => (
           <studentDetails key={eachStudentObj.id} />
 
