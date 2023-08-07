@@ -72,7 +72,8 @@ function App() {
   return (
     <div>
       <h1 className="header">Student Dashboard</h1>
-      {Darkmode}
+      <p><Darkmode /></p>
+
       {studentsToRender}
       <h2>Choose A Student By Cohort</h2>
       <StudentByCohort />

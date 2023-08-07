@@ -13,7 +13,7 @@ function Darkmode() {
         <div
             className="app" style={toggle ? { backgroundColor: "#000" } : { backgroundColor: "#fff" }}
         >
-            <Toggle toggle={toggle} handleToggleChange={handleToggleChange} />
+            <ToggleChange toggle={toggle} handleToggleChange={handleToggleChange} />
         </div>
     );
 }

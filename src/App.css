@@ -1,6 +1,8 @@
-.App {
+.app {
+    min-height: 100vH;
+    width: 100%;
+    transition: background-color 0.3s ease;
 
-    background-image: url("./Assets/Pursuit.png");
 }
 
 
@@ -14,13 +16,22 @@
 
 
 .card_container {
-
+    display: flex;
     border: 3px;
     border-radius: 5px;
     border-color: blue;
     background-color: beige;
     border-style: dashed;
     padding: 10px;
-    margin-right: 15px;
+    width: 40%;
+    margin: 5%;
+    margin-right: 50%;
+}
+
+.card_container img {
+
+    width: 150px;
+    height: 150px;
+    margin-right: 25px;
 
 }
