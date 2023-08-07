@@ -5,14 +5,20 @@
 
 }
 
-.header {
-
-    border: 5px solid gray;
-    padding: 30px;
-    background-color: yellow;
+.h2-Studentbycohort {
+    border: 5px;
+    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
+.header {
+
+    border: 5px solid gray;
+    padding: 20px;
+    background-color: yellow;
+
+}
 
 .card_container {
     display: flex;
@@ -25,6 +31,10 @@
     width: 40%;
     margin: 5%;
     margin-right: 50%;
+    background-image: url("src/Assets/Pursuit.png");
+    background-size: 500px 500px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .card_container img {
@@ -32,5 +42,17 @@
     width: 150px;
     height: 150px;
     margin-right: 25px;
+
+}
+
+
+.cohortByStartDateDropDown {
+
+    display: flex;
+    border-style: inset;
+    border-radius: 8px;
+    border-color: slategrey;
+    background-color: thistle;
+
 
 }

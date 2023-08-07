@@ -1,5 +1,7 @@
-import data from "../data/data.json"
 import React, { useState } from "react";
+import data from "../data/data.json"
+// import "./App.css"
+
 
 export default function StudentByCohort() {
     const [selectedCohort, setSelectedCohort] = useState("");
@@ -11,7 +13,7 @@ export default function StudentByCohort() {
         setSelectedCohort(selectedCohortCode);
 
         const studentsInCohort = data.filter(cohort => cohort.cohort.cohortCode === selectedCohortCode);
-        setFilteredStudents(studentsInCohort);
+        setFilteredStudents(studentsInCohort[0]?.students || []);
     };
 
     const cohortsToRender = data.map(
@@ -28,6 +30,7 @@ export default function StudentByCohort() {
 
     return (
         <div className="cohortByStartDateDropDown">
+            <h2 className="h2-studentbycohort"> Choose a Student By Cohort</h2>
             <form>
                 <label htmlFor="chooseCohort"> Select a Cohort </label>
                 <select id="chooseCohort" name="cohorts" onChange={handleCohortChange} value={selectedCohort}>
@@ -35,17 +38,19 @@ export default function StudentByCohort() {
                     {cohortsToRender}
                 </select>
             </form>
-            {selectedCohort && (
-                <div>
-                    Students in Selected Cohort
-                    <ul>
+            {
+                selectedCohort && (
+                    <div>
+                        Students in Selected Cohort
+                        <ul>
 
-                        {filteredStudents.map(student => (
-                            <li key={student.id}> {student.name}</li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-        </div>
+                            {filteredStudents.map(student => (
+                                <li key={student.id}> {student.name}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )
+            }
+        </div >
     );
 }

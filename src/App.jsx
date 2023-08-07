@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import data from "./data/data.json"
-import studentDetails from "./Components/studentDetails";
+import StudentDetails from "./Components/StudentDetails";
 import StudentByCohort from "./Components/StudentByCohort";
 import CommentsSection from "./Components/CommentsSection.jsx";
 import Darkmode from "./Components/Darkmode";
@@ -22,6 +22,8 @@ function App() {
       <div className="card_container" key={eachStudentObj.id}>
 
         <img src={eachStudentObj.profilePhoto} alt={`Image of Student: ${eachStudentObj.names.preferredName}`} />
+        {/* 
+        <p style="background-image: url('src/Assets/Pursuit.png')" className="background-image" alt="Background for each card"></p> */}
 
         <h4>
           <div className="studentName" id={eachStudentObj.id}>
@@ -44,16 +46,9 @@ function App() {
               >
                 {trackSelectedStudentByID === eachStudentObj.id ? "Show Less" : "Show More"}
               </button>
-              {trackSelectedStudentByID === eachStudentObj.id && (
-                <studentDetails student={eachStudentObj} />
+              {trackSelectedStudentByID === eachStudentObj.id ? <StudentDetails studentdeets={eachStudentObj} /> : <></>
 
-              )}
-
-              {/* <button type="submit onClick={() => setShowCertifs(!showCertifs)}> 
-                {showCertifs ? "Show Less" : "Show More"}
-              </button>
-              {showCertifs && studentDetails}
-              {showCertifs && <studentDetails />} */}
+              }
 
             </div>
 
@@ -75,7 +70,7 @@ function App() {
       <p><Darkmode /></p>
 
       {studentsToRender}
-      <h2>Choose A Student By Cohort</h2>
+
       <StudentByCohort />
 
 
@@ -84,13 +79,13 @@ function App() {
         <h2> Student Details</h2>
         {/* {studentsToRender} */}
         {showCertifs && studentsToRender.map(eachStudentObj => (
-          <studentDetails key={eachStudentObj.id} />
+          <StudentDetails key={eachStudentObj.id} />
 
 
         ))}
 
-
       </div>
+
 
 
       <div className="divSection" />
@@ -98,7 +93,7 @@ function App() {
         <h2> Student Comments Section</h2>
         <CommentsSection />
       </section>
-    </div>
+    </div >
   );
 
 }
