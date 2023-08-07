@@ -1,7 +1,17 @@
-.Darkmode {
+.Darkmode-app-wrapper {
+
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40%;
+    box-sizing: border-box;
+    color: white;
+}
+
+.Darkmode-app {
 
     display: flex;
     justify-content: center;
-    height: 100vh;
-
+    align-items: center;
+    min-height: 100vH;
+    transition: background-color 0.3s ease;
 }
