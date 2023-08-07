@@ -1,7 +1,7 @@
 import data from "../data/data.json"
 import React, { useState } from "react";
 
-function StudentByCohort() {
+export default function StudentByCohort() {
     const [selectedCohort, setSelectedCohort] = useState("");
     const [filteredStudents, setFilteredStudents] = useState([]);
 
@@ -16,9 +16,11 @@ function StudentByCohort() {
 
     const cohortsToRender = data.map(
         (cohortsByYear, index) => {
+            const cohort = cohortsByYear.cohort;
+            const cohortChoices = `${cohort.season} ${cohort.year} ${cohort.cohortCode}`;
 
             return (
-                <option key={index} value={cohortsByYear.cohort.cohortCode}> {`${cohortsByYear.cohort.season} ${cohortsByYear.cohort.cohortCode.year}: ${cohortsByYear.cohort.cohortCode}`} </option>
+                <option key={index} value={cohort.cohortCode}> {cohortChoices}</option>
 
             );
         }
@@ -47,6 +49,3 @@ function StudentByCohort() {
         </div>
     );
 }
-
-
-export default StudentByCohort;

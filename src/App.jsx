@@ -3,6 +3,9 @@ import { useState } from "react";
 import data from "./data/data.json"
 import studentDetails, { GraduationStatus } from "./Components/studentDetails";
 import StudentByCohort from "./Components/StudentByCohort";
+import Darkmode from "./Components/Darkmode";
+import ToggleChange from "./Components/ToggleChange.jsx"
+import "./Components/Toggle.css"
 import "./App.css"
 
 
@@ -68,7 +71,8 @@ function App() {
   return (
     <div>
       <h1 className="header">Student Dashboard</h1>
-      {/* {studentsToRender} */}
+      {Darkmode}
+      {studentsToRender}
       <h2>Choose A Class By Start Date</h2>
       <StudentByCohort />
 
