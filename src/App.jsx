@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import data from "./data/data.json"
-import studentDetails, { GraduationStatus } from "./Components/studentDetails";
+import studentDetails from "./Components/studentDetails";
 import StudentByCohort from "./Components/StudentByCohort";
+import CommentsSection from "./Components/CommentsSection.jsx";
 import Darkmode from "./Components/Darkmode";
 import ToggleChange from "./Components/ToggleChange.jsx"
 import "./Components/Toggle.css"
@@ -73,8 +74,10 @@ function App() {
       <h1 className="header">Student Dashboard</h1>
       {Darkmode}
       {studentsToRender}
-      <h2>Choose A Class By Start Date</h2>
+      <h2>Choose A Student By Cohort</h2>
       <StudentByCohort />
+
+
 
       <div className="studentDeets">
         <h2> Student Details</h2>
@@ -83,11 +86,17 @@ function App() {
           <studentDetails key={eachStudentObj.id} />
 
 
-
         ))}
 
 
       </div>
+
+
+      <div className="divSection" />
+      <section>
+        <h2> Student Comments Section</h2>
+        <CommentsSection />
+      </section>
     </div>
   );
 

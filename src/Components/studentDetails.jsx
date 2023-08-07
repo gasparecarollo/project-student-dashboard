@@ -2,7 +2,7 @@ import data from "../data/data.json";
 import React, { useState } from "react";
 
 
-export function GraduationStatus(props) {
+function GraduationStatus(props) {
     const [isOnTrack, setIsOnTrack] = useState(false);
 
     const { resume, linkedin, github, mockInterview, codeWarsScore } = props.certifications;
@@ -11,12 +11,12 @@ export function GraduationStatus(props) {
     return (
 
         <div>
-            <p>Student is {isOnTrack ? "on track" : "off track"} to graduate Pursuit.</p>
+            <p>Student is {isOnTrack ? "on track" : "off track"} </p>
 
         </div>
     )
 }
-export default function studentDetails({ studentdeets }) {
+const studentDetails = ({ studentdeets }) => {
     return (
 
         <div className="details">
@@ -26,10 +26,12 @@ export default function studentDetails({ studentdeets }) {
             <p>{`Mock Interview Status: ${studentdeets.mockInterview ? "👍🏻" : "👎🏻"}`} </p>
             <p>{`CodeWars Score Percentage: ${studentdeets.codewars && (parseInt(studentdeets.codewars.current.total) / parseInt(studentdeets.codewars.goal.total) * 100).toFixed(2)} %`}</p>
             <p>{`CodeWars Score above 600: ${studentdeets.codewars && parseInt(studentdeets.codewars.current.total) <= 600 ? "👍🏻" : "👎🏻"}`}</p>
-            <GraduationStatus certifications={studentdeets.certifications} />
         </div>
 
 
     );
 
 };
+
+
+export default studentDetails;
