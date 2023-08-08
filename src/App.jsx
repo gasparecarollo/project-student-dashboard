@@ -12,9 +12,15 @@ import "./App.css"
 
 console.log("data[0] : ", data[0])
 
+
+
 function App() {
   const [trackSelectedStudentByID, setTrackSelectedStudentByID] = useState(null);
   const [showCertifs, setShowCertifs] = useState(false);
+
+
+  const studentTotal = data.length;
+  console.log(studentTotal)
 
   const studentsToRender = data.map(
     (eachStudentObj) => (
@@ -67,16 +73,20 @@ function App() {
   return (
     <div>
       <h1 className="header">Student Dashboard</h1>
-      <p><Darkmode /></p>
+      <div className="studenttotal">
+        <h3>{`Student Total: ${studentTotal}`}</h3>
+      </div>
+      {/* <div><Darkmode /></div> */}
 
       {studentsToRender}
-
-      <StudentByCohort />
-
+      <div className="studentbycohort">
+        <StudentByCohort />
+      </div>
 
 
       <div className="studentDeets">
         <h2> Student Details</h2>
+
         {/* {studentsToRender} */}
         {showCertifs && studentsToRender.map(eachStudentObj => (
           <StudentDetails key={eachStudentObj.id} />

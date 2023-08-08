@@ -38,18 +38,20 @@ const CommentsSection = () => {
     });
 
     return (
-        <div>
-            <form id="commentForm" onSubmit={handlePostComments}>
-                <label htmlFor="nameInput"> Commenter Name:</label>
+        <div className="entire-commentSect">
+            <form className="comment-section" id="commentForm" onSubmit={handlePostComments}>
+                <label className="Commenter" htmlFor="nameInput"> Commenter Name:</label>
                 <input id="nameInput" className="CommName" type="text" placeholder="Name" />
-
-                <label htmlFor="commentBox">1 on 1 Comments:</label>
+                <br />
+                <br />
+                <br />
+                <label className="oneone" htmlFor="commentBox">1 on 1 Comments:</label>
                 <textarea id="commentBox" className="commentbox" placeholder="Place text here"></textarea>
 
-                <button type="submit" class="submitBtn">Submit</button>
+                <button type="submit" className="submitBtn">Submit</button>
             </form>
 
-            <div id="comments">
+            <div className="commentsArea" id="comments">
                 {/* Place existing comments here */}
             </div>
         </div >

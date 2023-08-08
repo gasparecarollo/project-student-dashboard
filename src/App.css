@@ -20,6 +20,15 @@
 
 }
 
+.studenttotal {
+
+    border-style: double;
+    border-radius: 5px;
+    border-color: steelblue;
+    background-color: snow;
+    width: 160px;
+}
+
 .card_container {
     display: flex;
     border: 3px;
@@ -28,7 +37,7 @@
     background-color: beige;
     border-style: dashed;
     padding: 10px;
-    width: 40%;
+    width: 60%;
     margin: 5%;
     margin-right: 50%;
     background-image: url("src/Assets/Pursuit.png");
@@ -49,10 +58,100 @@
 .cohortByStartDateDropDown {
 
     display: flex;
-    border-style: inset;
+    position: absolute;
+    top: 23px;
+    right: 0px;
+    width: 50%;
+    height: 8%;
     border-radius: 8px;
+    border-style: inset;
     border-color: slategrey;
     background-color: thistle;
+    align-items: center;
 
+
+}
+
+.h2-studentbycohort {
+
+
+    display: flex;
+    margin-left: 10%;
+    width: 70%;
+    align-items: center;
+}
+
+.cohortForm {
+    border: 4px;
+    width: 40%
+}
+
+.ontrack {
+
+    border: 5px;
+    border-style: inset;
+    border-color: darkslategrey;
+    width: 70%;
+    background-color: red;
+
+}
+
+.gradreq {
+    padding: 5%;
+    border-style: groove;
+    border-radius: 3px;
+    border-color: burlywood;
+    background-color: beige;
+    width: 270px;
+}
+
+.scores {
+    margin: 5%;
+    padding: 10%;
+    border-style: outset;
+    border-radius: 4px;
+    border-color: chocolate;
+    background-color: wheat;
+}
+
+.comment-section {
+
+    border-radius: 5px;
+    border-style: groove;
+    border-color: azure;
+    background-color: antiquewhite;
+    width: 280px;
+    height: 240px;
+    margin-right: 35%;
+
+}
+
+.entire-commentSect {
+    width: 50%;
+}
+
+.Commenter {
+
+    margin-left: 20%;
+}
+
+.CommName {
+    margin-right: 40%;
+}
+
+.oneone {
+
+    margin-bottom: 60%;
+}
+
+.commentbox {
+
+    margin-top: 20%;
+
+}
+
+.submitBtn {
+
+    margin-top: 70px;
 
 }
