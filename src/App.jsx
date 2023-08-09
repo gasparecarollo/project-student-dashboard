@@ -76,7 +76,7 @@ function App() {
       <div className="studenttotal">
         <h3>{`Student Total: ${studentTotal}`}</h3>
       </div>
-      {/* <div><Darkmode /></div> */}
+      <div><Darkmode /></div>
 
       {studentsToRender}
       <div className="studentbycohort">
